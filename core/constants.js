@@ -265,3 +265,9 @@ Blockly.RENAME_VARIABLE_ID = 'RENAME_VARIABLE_ID';
  * @const {string}
  */
 Blockly.DELETE_VARIABLE_ID = 'DELETE_VARIABLE_ID';
+
+Blockly.FLYOUT_OPACITY = .35;
+
+Blockly.TURTLE_RGB = "#F29400";
+
+Blockly.DEFAULT_COLOR = "#55C7EE";
