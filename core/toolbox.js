@@ -340,13 +340,14 @@ Blockly.Toolbox.prototype.syncTrees_ = function(treeIn, treeOut, pathToMedia) {
           }
           this.hasColours_ = true;
         } else {
-            childOut.hexColour = '';
-            var rgbName = childIn.getAttribute('name').toUpperCase() + '_RGB';
-            var colour = Blockly[rgbName];
-            if (colour) {
-                childOut.hexColour = colour;
-            } else {
-                childOut.hexColour = Blockly.DEFAULT_COLOR;
+            childOut.hexColour = Blockly.DEFAULT_COLOR;
+            var id = childIn.getAttribute('id');
+            if(id) {
+                var rgbName = id.toUpperCase() + '_RGB';
+                var colour = Blockly[rgbName];
+                if (colour) {
+                    childOut.hexColour = colour;
+                }
             }
             this.hasColours_ = true;
         }
